@@ -86,17 +86,13 @@ def get_text():
             waste_type = classify_waste('image.jpg')
             
             # Return the classification result
-            # return jsonify({"message": waste_type})
-            return {waste_type}
+            return jsonify({"message": waste_type})
         else:
-            # return jsonify({"message": "error_downloading_image"})
-            return {"error_downloading_image"}
+            return jsonify({"message": "error_downloading_image"})
             
     except Exception as e:
         print(f"Error in get_text: {e}")
-        # return jsonify({"message": "error_processing_request"})
-        return {"error_downloading_image"}
-
+        return jsonify({"message": "error_processing_request"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
