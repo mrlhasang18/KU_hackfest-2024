@@ -22,7 +22,7 @@ import time
 app = Flask(__name__)
 
 # Configure Google Generative AI with your API key
-configure(api_key='AIzaSyCHXKfxeg6N45xIyiGHxCF_Af4VaBhULAI')
+configure(api_key='')
 
 # Initialize the model
 model = GenerativeModel('gemini-1.5-flash')
